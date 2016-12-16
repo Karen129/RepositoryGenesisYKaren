@@ -1,0 +1,123 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package com.dominio.dao;
+
+/**
+ *
+ * @author USUARIO
+ */
+public class Trabajador {
+    private int id_trabajador;
+    private String cedula;
+    private String nombres;
+    private String apellidos;
+    private String fecha_nac;
+    private String sexo;
+    private String direccion;
+    private String telefono;
+    private String contraseña;
+    private Cargos cargo;
+
+    public Trabajador() {
+    }
+
+    public Trabajador(int id_trabajador, String cedula, String nombres, String apellidos, String fecha_nac, String sexo, String direccion, String telefono, String contraseña, Cargos cargo) {
+        this.id_trabajador = id_trabajador;
+        this.cedula = cedula;
+        this.nombres = nombres;
+        this.apellidos = apellidos;
+        this.fecha_nac = fecha_nac;
+        this.sexo = sexo;
+        this.direccion = direccion;
+        this.telefono = telefono;
+        this.contraseña = contraseña;
+        this.cargo = cargo;
+    }
+
+    public int getId_trabajador() {
+        return id_trabajador;
+    }
+
+    public void setId_trabajador(int id_trabajador) {
+        this.id_trabajador = id_trabajador;
+    }
+
+    public String getCedula() {
+        return cedula;
+    }
+
+    public void setCedula(String cedula) {
+        this.cedula = cedula;
+    }
+
+    public String getNombres() {
+        return nombres;
+    }
+
+    public void setNombres(String nombres) {
+        this.nombres = nombres;
+    }
+
+    public String getApellidos() {
+        return apellidos;
+    }
+
+    public void setApellidos(String apellidos) {
+        this.apellidos = apellidos;
+    }
+
+    public String getFecha_nac() {
+        return fecha_nac;
+    }
+
+    public void setFecha_nac(String fecha_nac) {
+        this.fecha_nac = fecha_nac;
+    }
+
+    public String getSexo() {
+        return sexo;
+    }
+
+    public void setSexo(String sexo) {
+        this.sexo = sexo;
+    }
+
+    public String getDireccion() {
+        return direccion;
+    }
+
+    public void setDireccion(String direccion) {
+        this.direccion = direccion;
+    }
+
+    public String getTelefono() {
+        return telefono;
+    }
+
+    public void setTelefono(String telefono) {
+        this.telefono = telefono;
+    }
+
+    public String getContraseña() {
+        return contraseña;
+    }
+
+    public void setContraseña(String contraseña) {
+        this.contraseña = contraseña;
+    }
+
+    public Cargos getCargo() {
+        return cargo;
+    }
+
+    public void setCargo(Cargos cargo) {
+        this.cargo = cargo;
+    }
+
+  
+    
+
+}
