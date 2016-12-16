@@ -193,8 +193,8 @@ public class menu extends javax.swing.JFrame {
     }//GEN-LAST:event_VentasActionPerformed
 
     private void CajaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CajaActionPerformed
-        new formularioreportetotal().setVisible(true);
-        this.setVisible(false);
+//        new formularioreportetotal().setVisible(true);
+//        this.setVisible(false);
     }//GEN-LAST:event_CajaActionPerformed
 
     /**

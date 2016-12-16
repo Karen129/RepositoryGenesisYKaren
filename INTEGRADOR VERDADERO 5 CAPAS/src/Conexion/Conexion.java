@@ -27,7 +27,7 @@ public class Conexion {
         try {            
             cn = DriverManager.getConnection(
            "jdbc:postgresql://localhost:5432/Restaurant"
-                    ,"postgres", "1234");            
+                    ,"postgres", "diosito");            
         }
         catch (SQLException e) {
             System.out.println("Error de conexion!!");

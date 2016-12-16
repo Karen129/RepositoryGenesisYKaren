@@ -19,12 +19,12 @@ public class Trabajador {
     private String direccion;
     private String telefono;
     private String contraseña;
-    private Cargos cargo;
+    private int id_cargo;
 
     public Trabajador() {
     }
 
-    public Trabajador(int id_trabajador, String cedula, String nombres, String apellidos, String fecha_nac, String sexo, String direccion, String telefono, String contraseña, Cargos cargo) {
+    public Trabajador(int id_trabajador, String cedula, String nombres, String apellidos, String fecha_nac, String sexo, String direccion, String telefono, String contraseña, int id_cargo) {
         this.id_trabajador = id_trabajador;
         this.cedula = cedula;
         this.nombres = nombres;
@@ -34,7 +34,7 @@ public class Trabajador {
         this.direccion = direccion;
         this.telefono = telefono;
         this.contraseña = contraseña;
-        this.cargo = cargo;
+        this.id_cargo = id_cargo;
     }
 
     public int getId_trabajador() {
@@ -109,15 +109,13 @@ public class Trabajador {
         this.contraseña = contraseña;
     }
 
-    public Cargos getCargo() {
-        return cargo;
+    public int getId_cargo() {
+        return id_cargo;
     }
 
-    public void setCargo(Cargos cargo) {
-        this.cargo = cargo;
+    public void setId_cargo(int id_cargo) {
+        this.id_cargo = id_cargo;
     }
-
-  
     
 
 }

@@ -10,7 +10,7 @@ public class ConexionBD {
         private static Connection cnn;
 	public static String url = "jdbc:postgresql://localhost:5432/Restaurant";
         public static String user = "postgres";
-        public static String password = "1234";
+        public static String password = "diosito";
 		    
         public static Connection Open() throws SQLException {
         	try {

@@ -18,14 +18,15 @@ public class trabajadordao  {
     public void insertartrabajador(Trabajador trab){
     	String sql ="INSERT INTO trabajador(\n" +
                "             cedula, nombres, apellidos, fecha_nac, sexo, direccion, \n" +
-               "            telefono, \"contraseña\",id_carg)\n" +
+               "            telefono, \"contraseña\")\n" +
                "    VALUES (?, ?, ?, ?, ?, ?, ?, \n" +
-               "            ?, ?);";
+               "            ?, ?, ?);";
             
      
         try {
             Connection cn = Conexion.getConnection();
             PreparedStatement st = cn.prepareStatement(sql);
+      
             st.setString(1, trab.getCedula());
             st.setString(2, trab.getNombres());
             st.setString(3, trab.getApellidos());
@@ -34,7 +35,7 @@ public class trabajadordao  {
             st.setString(6, trab.getDireccion());
             st.setString(7,trab.getTelefono());
             st.setString(8,trab.getContraseña());
-//            st.setInt(9,getCargo(trab.getCargo());
+//            st.setInt(9,trab.getId_trabajador());
             
             
           
@@ -65,8 +66,7 @@ public class trabajadordao  {
                         st.setString(6, trab.getDireccion());
                         st.setString(7,trab.getTelefono());
                         st.setString(8,trab.getContraseña());
-//                        st.setInt(9,trab.getId_cargo());
-                        st.setInt(10, trab.getId_trabajador());
+                        st.setInt(9,trab.getId_trabajador());
    
 			st.execute();
                         st.close();

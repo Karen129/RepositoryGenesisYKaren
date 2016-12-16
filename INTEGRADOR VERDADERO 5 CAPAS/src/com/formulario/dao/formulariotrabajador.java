@@ -703,14 +703,17 @@ public class formulariotrabajador extends javax.swing.JFrame {
     }//GEN-LAST:event_txtcedulaKeyReleased
 
     private void bnmodificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bnmodificarActionPerformed
-//          if(txtcedula.getText().equals(" ")|| txtnombres.getText().equals("") ||txtapellidos.getText().equals("") ||
-//            txtfecha.getText()==null || cbsexo.getActionCommand().equals("")||
-//               txtdireccion.getText().equals("")||txttelefono2.getText().equals("")||txtcontraseña.getText().equals("")){
-//            JOptionPane.showMessageDialog(null, "Falta datos por ingresar","Error",JOptionPane.ERROR_MESSAGE);
-//        }else
-//        if(JOptionPane.showConfirmDialog(null,"Actualizar Datos", "Confirmar",1)==0){
-//            Modificar();
-//        }
+          if(txtcedula.getText().equals(" ")|| txtnombres.getText().equals("") ||txtapellidos.getText().equals("") ||
+            txtfecha.getText()==null || cbsexo.getActionCommand().equals("")||
+               txtdireccion.getText().equals("")||txttelefono2.getText().equals("")||txtcontraseña.getText().equals("")){
+            JOptionPane.showMessageDialog(null, "Falta datos por ingresar","Error",JOptionPane.ERROR_MESSAGE);
+        }else
+        if(JOptionPane.showConfirmDialog(null,"Actualizar Datos", "Confirmar",1)==0){
+            Modificar();
+        }
+    }//GEN-LAST:event_bnmodificarActionPerformed
+
+    public void Modificar(){
        trabajadordao td = new trabajadordao();
        Trabajador tb = new Trabajador();
  
@@ -722,15 +725,10 @@ public class formulariotrabajador extends javax.swing.JFrame {
        tb.setDireccion(txtdireccion.getText().toUpperCase());
        tb.setTelefono(txttelefono2.getText());
        tb.setContraseña(txtcontraseña.getText());
-//       tb.setId_cargo(cbcargo.getSelectedObjects().length);
        tb.setId_trabajador(Integer.parseInt(codigo.getText()));
        td.modificartrabajador(tb);
        JOptionPane.showMessageDialog(rootPane,"MODIFICADO CORRECTAMENTE");
        Limpiar();
-    }//GEN-LAST:event_bnmodificarActionPerformed
-
-    public void Modificar(){
-       
     }
     private void bneliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bneliminarActionPerformed
 
@@ -773,7 +771,6 @@ public void guardar(){
        tb.setDireccion(txtdireccion.getText().toUpperCase());
        tb.setTelefono(txttelefono2.getText());
        tb.setContraseña(txtcontraseña.getText());
-//       tb.setId_cargo(cbcargo.getSelectedObjects().length);
        td.insertartrabajador(tb);
        JOptionPane.showMessageDialog(rootPane,"GUARDADO CORRECTAMENTE"); 
        Limpiar();

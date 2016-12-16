@@ -99,8 +99,7 @@ public class formularioreporte extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         lblsalir = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
-        jDateChooser1 = new com.toedter.calendar.JDateChooser();
-        jDateChooser2 = new com.toedter.calendar.JDateChooser();
+        dcfecha = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("REPORTES");
@@ -227,9 +226,8 @@ public class formularioreporte extends javax.swing.JFrame {
         getContentPane().add(lblsalir, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 110, -1, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagen/blanco.jpg"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -90, 740, 490));
-        getContentPane().add(jDateChooser1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 60, -1, -1));
-        getContentPane().add(jDateChooser2, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 60, -1, -1));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-150, 150, 740, 490));
+        getContentPane().add(dcfecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 60, 110, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -355,8 +353,7 @@ public class formularioreporte extends javax.swing.JFrame {
     public static javax.swing.ButtonGroup Criterio;
     private javax.swing.JTable Ttabla;
     private javax.swing.JButton bnImprimir;
-    private com.toedter.calendar.JDateChooser jDateChooser1;
-    private com.toedter.calendar.JDateChooser jDateChooser2;
+    private javax.swing.JTextField dcfecha;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

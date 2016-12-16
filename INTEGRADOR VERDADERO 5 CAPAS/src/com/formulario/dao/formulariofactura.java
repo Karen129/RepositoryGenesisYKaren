@@ -43,7 +43,7 @@ public class formulariofactura extends javax.swing.JFrame implements Printable{
         vendedor.setText(txtusuario.getText().toUpperCase());
         //Generar la fecha actual 
         Date FechaActual = new Date();
-        dcfecha.setDate(FechaActual);
+//      dcfecha.setDate(FechaActual);
         lblfecha.setText(df.format(FechaActual));
         dcfecha.setVisible(false);
         CodigoFactura();
@@ -740,7 +740,7 @@ public class formulariofactura extends javax.swing.JFrame implements Printable{
         String sql="insert into factura(fecha, cajero,cliente,valor_cancelado) values(?,?,?,?)";
         try{
             PreparedStatement ps = conn.prepareStatement(sql);
-            ps.setDate(1, Convertirfecha());
+//            ps.setDate(1, Convertirfecha());
             ps.setString(2, vendedor.getText());
             ps.setString(3, txtcliente.getText());
             ps.setDouble(4, Double.parseDouble(txttotalpagar.getText()));
@@ -794,10 +794,10 @@ public class formulariofactura extends javax.swing.JFrame implements Printable{
              }
     }
     //------- CONVERTIDOR DE FECHA  ------------
-    public java.sql.Date Convertirfecha(){
-        java.sql.Date fecha = new   java.sql.Date(dcfecha.getDate().getTime());
-        return fecha;
-    }
+//    public java.sql.Date Convertirfecha(){
+////        java.sql.Date fecha = new   java.sql.Date(dcfecha.getDate().getTime());
+//        return fecha;
+//    }
     /**
      * @param args the command line arguments
      */
